@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+
+<body>
+<div id="header">
+    <a id="logo" href="{{ url_for('home') }}">UFC-AI</a>
+    <div id="links">
+        <a href="{{ url_for('home') }}">Home</a>
+        <a href="{{ url_for('howitworks') }}">How It Works</a>
+    </div>
+    <div id="logo2"> </div>     
+</div>
+<div id="howitworks">
+    <div id="howitworkstext">
+    <h1 id="abth">About</h1>
+    <p4 id="abtp"> Welcome to the UFC Fight Prediction project! This initiative leverages data science and machine learning to predict the outcomes of UFC fights. By analyzing historical fight data and fighter statistics, we aim to provide accurate predictions on the probability of a fighter winning a match.</p4>       
+    </div>
+    <div id= "binfo"> 
+    <div id = "info">
+        <div id = "hiwb1" class="hiwbox">
+            <h2 class="hiwh"> Data Collection</h2>
+            <p class="hiwp">The data for this project is meticulously gathered from various online sources, including UFC statistics and fight records. Here's an overview of our data collection process:</p2>
+            <h3 class="minheader"> Fighter Statistics:</h3>
+            <ul class="hiwblist">
+                <li class="item">Metrics: Height, age, reach, stance, significant strikes landed per minute, striking accuracy, takedown average, takedown accuracy, takedown defense, submission average, and fight record. 
+                </li>
+                <li class="item">Excluded Metric: Weight/weight. Fighters must be in the same weight class to be sanctioned to fight, so the model doesn't consider their weight. Also by excluding weight, users can create fun fantasy matchups, in which the model predicts who will win purely based on the skillsets of two fighters. </li>
+                <li class="item">Method: Data is collected using web scraping techniques, primarily with BeautifulSoup and requests libraries.
+                </li>
+            </ul>
+            
+            <h3 class="minheader"> Fight Outcomes:</h3>    
+            <ul class="hiwblist">
+                <li class="item">Data: Historical fight data, including fight outcomes (win, loss, draw), fight method (KO/TKO, submission, decision), and fight-specific statistics.
+                </li>
+
+            </ul>
+        </div>
+        <div id = "hiwb2" class="hiwbox">
+            <h2 class="hiwh"> Data Preprocessing</h2>
+            <p class="hiwp">Once collected, the data undergoes several preprocessing steps to ensure it is suitable for machine learning:</p2>
+                <h3 class="minheader"> Data Cleaning:</h3>
+                <ul class="hiwblist">
+                    <li class="item">Process: Remove fighters with missing values in key statistics and convert dates of birth to fighter ages.
+                    </li>
+                    <li class="item">Consistency: Clean up data formats for uniformity.
+                    </li>
+                </ul>
+                
+                <h3 class="minheader"> Feature Engineering:</h3>    
+                <ul class="hiwblist">
+                    <li class="item">Categorical Variables: Convert variables such as stance and fight method to numerical representations using one-hot encoding.
+                    </li>
+                    <li class="item">Normalization: Scale numerical features to a consistent range using MinMaxScaler.
+                    </li>
+                </ul>
+                <h3 class="minheader"> Data Merging:</h3>    
+                <ul class="hiwblist">
+                    <li class="item">Comprehensive Dataset: Merge fighter statistics with fight outcome data to create a robust dataset for model training.
+                    </li>
+
+                </ul>
+        </div>
+    </div>
+
+    </div>
+    <div id="modelinfo">
+        <h4 id="modelh">Predictive Model</h4>
+        
+        <p id="modelp">Our predictive model is built using TensorFlow, a powerful deep learning framework. The model architecture and training process involve:</p>
+        <div id = "modelinfobox">
+            <div id="modeltxt">
+                <h3 class="minheader"> Model Architecture</h3>
+                <ul class="hiwblist">
+                    <li class="item">Neural Network: The neural network is designed with multiple layers to capture the complex relationships between fighter statistics and fight outcomes. 
+                    </li>
+                    <li class="item">The architecture includes an input layer, three hidden layers each with 73 neurons using ReLU activation, and an output layer with a single neuron using sigmoid activation to predict the probability of a fighter winning.</li>
+                </ul>
+                <h3 class="minheader"> Training and Validation</h3>
+                <ul class="hiwblist">
+                    <li class="item">Output: The model outputs the probability of a fighter winning a match based on input features such as fight statistics and fighter attributes.
+
+                    </li>
+                    <li class="item">Clarity: Predictions are scaled and rounded for clarity. The model achieved an accuracy of 69.41% on the test data, making this a significant metric indicating its predictive capability.
+
+
+                    </li>
+                </ul>
+                <h3 class="minheader"> Prediction</h3>
+                <ul class="hiwblist">
+                    <li class="item">Output: The model provides the probability of a fighter winning a match based on input features.
+                    </li>
+                    <li class="item">Clarity: Predictions are scaled and rounded for clarity.
+                    </li>
+                </ul>
+                
+            </div>
+            <img id="mlpic" src="static/dl.png" alt="ML model picture">
+        </div>
+    </div> 
+</div>
+
+<footer id="footer">
+    <a href="https://www.linkedin.com/in/krish-shah-045680227/">
+        <img class="fimg" src="static/linkedin.png" alt="linkedin">
+        
+    </a>
+    <a href="https://github.com/kri-shah/MMAI">
+        <img class="fimg" src="static/github.png" alt="github">
+    </a>
+    <a href="mailto:krishdshah0@gmail.com">
+        <img class="fimg" src="static/mail.png" alt="email">
+    </a>
+</footer>
+
+<footer id="foot">
+    <a id="lala" style="margin: 0; padding: 0;" href="https://www.flaticon.com/free-icons/fight" title="fight icons">Icons created by Freepik - Flaticon</a>
+</footer>
+</body>
+</html>

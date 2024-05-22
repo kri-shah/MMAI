@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div id="header">
+        <div id="logo">UFC-AI</div> 
+        <div id="links">
+            <a href="{{ url_for('howitworks') }}">How It Works</a>
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('predict') }}">Predict</a>
+        </div>
+        <div id="logo2"></div>     
+    </div>
+    <div id="homebody2">
+        <h2 id="h2">
+            Features
+        </h2>
+        <div id="hcontainer">
+            <div id="b1" class="box">
+                <div id="img1"></div>
+                <div id="boxtext"> 
+                    <h3 id="h3">Fight Stats</h3>
+                    <p3 id="p3">We collected fight data from well over 6000 fights spanning the past 20
+                        years. 
+                    </p3>
+                </div>
+    
+            </div>
+    
+            <div id="b2" class="box">
+                <div id="img2"></div>
+                <div id="boxtext2"> 
+                    <h3 id="h3">Fighter Stats</h3>
+                    <p3 id="p4"> We collected data from over 2100 fighters and across all men's and women's divisions.</p3>
+                </div>
+            </div>
+            <div id="b3" class="box">
+                <div id="img3"></div>
+                <div id="boxtext"> 
+                    <h3 id="h3">Accuracy </h3>
+                    <p3 id="p3">Model boasts 70% accuracy. 
+    
+                    </p3>
+                </div>
+    
+            </div>
+            <div id="b4" class="box">
+                <div id="img4"></div>
+                <div id="boxtext"> 
+                    <h3 id="h3">Machine Learning</h3>
+                    <p3 id="p5">We used a state of the art deep learning model to generate our predictions.
+                    </p3>
+    
+    
+                    
+                </div>
+    
+            </div>
+    
+        </div>
+    </div>
+
+   
+   
+</body>
+</html>
