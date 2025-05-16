@@ -2,7 +2,7 @@
 **Neural Network Predictive Model for MMA Fights - 69.41% Accuracy**
 
 ## Overview
-MMAI is a machine learning model designed to predict the outcomes of MMA fights with a 69.41% accuracy rate. This repository includes all necessary code and data for scraping fight statistics, training the model, and making predictions via a web interface.
+MMAI is a machine learning model designed to predict the outcomes of MMA fights with a 70% accuracy rate. This repository includes all necessary code and data for scraping fight statistics, training the model, and making predictions via a web interface.
 
 ## Repository Structure
 
